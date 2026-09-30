@@ -1,7 +1,7 @@
 MMPBSA_Scoring - A python pipeline for estimating single residue mutation effects on protein-protein interactions
 =================================================================================================================
 
-Install the conda environment from the file ``environment.yml`` and execute the python script ``ui.py`` to run the pipeline.
+Install the conda environment from the file ``environment.yml`` and execute the python script ``mmpbsa_scoring/ui.py`` to run the pipeline.
 
 .. code-block:: bash
 
@@ -42,4 +42,4 @@ See also our preprint about the method: `bioRXiv <https://www.biorxiv.org/conten
 
 This project is licensed under the MIT license. Keep in mind that third-party software components required to run the tool are subject to their own license agreements.
 
-**Important:** Users have to obtain a copy of FoldX and place it in the folder ``bin`` as ``foldx``, be aware that FoldX is subject to its own `license agreements <https://foldxsuite.crg.eu/licensing-and-services>`_.
+**Important:** Users have to obtain a copy of FoldX and place it in the folder ``mmpbsa_scoring/bin`` as ``foldx``, be aware that FoldX is subject to its own `license agreements <https://foldxsuite.crg.eu/licensing-and-services>`_.
