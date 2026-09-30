@@ -1,0 +1,12 @@
+name: mmpbsa_scoring
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python<=3.13
+  - biopython
+  - pdb2pqr
+  - apbs
+  - pdbfixer
+  - openmm
+  - reduce

@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<patches>
+  <residue>
+     <name>N...$</name>
+     <atom>
+       <name>H</name>
+       <useatomname>H1</useatomname>
+     </atom>
+   </residue>
+   <residue>
+       <name>NPRO</name>
+       <atom>
+          <name>H</name>
+          <useatomname>H3</useatomname>
+       </atom>
+   </residue>
+</patches>
