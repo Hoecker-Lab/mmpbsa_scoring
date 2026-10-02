@@ -34,6 +34,36 @@ The pipeline consists of:
       --mutation MUTATION   Specific mutation to evaluate, in the format: Chain_ID:Residue_ID:Residue_Name (For example: A:15:ALA)
       --tmp_dir TMP_DIR     Path to temporary directory (Will be deleted afterwards!)
 
+Example
+-------
+
+See also the provided example in the folder ``example``, you can recreate the output by executing:
+
+.. code-block:: bash
+
+    python3 mmpbsa_scoring/ui.py --prepare --structure 2FTL.pdb --chain_group_a E --chain_group_b I
+
+    2026-10-02 11:00:48,375 - mmpbsa_scoring - INFO - Cleaning structure.
+    2026-10-02 11:00:48,397 - mmpbsa_scoring - INFO - Repacking structure.
+
+.. code-block:: bash
+
+    python3 mmpbsa_scoring/ui.py --structure structure_prepared.pdb --chain_group_a E --chain_group_b I --mutation I:15:ASP
+
+    2026-10-02 12:03:08,875 - mmpbsa_scoring - INFO - Mutating structure.
+    2026-10-02 12:03:35,064 - mmpbsa_scoring - INFO - Minimizing mutated structure.
+    2026-10-02 12:03:38,998 - mmpbsa_scoring - INFO - Aligning mutated structure.
+    2026-10-02 12:03:39,072 - mmpbsa_scoring - INFO - Calculating binding free energy of mutated structure.
+    2026-10-02 12:04:10,341 - mmpbsa_scoring - INFO - Minimizing wildtype structure.
+    2026-10-02 12:04:13,817 - mmpbsa_scoring - INFO - Aligning wildtype structure.
+    2026-10-02 12:04:13,892 - mmpbsa_scoring - INFO - Calculating binding free energy of wildtype structure.
+    2026-10-02 12:04:44,580 - mmpbsa_scoring - INFO - Estimated binding free energy difference: 9.458 kcal/mol.
+    2026-10-02 12:04:44,580 - mmpbsa_scoring - INFO - Estimated change in VdW energy: 0.966 kcal/mol.
+    2026-10-02 12:04:44,580 - mmpbsa_scoring - INFO - Estimated change in electrostatic energy: 7.225 kcal/mol.
+    2026-10-02 12:04:44,580 - mmpbsa_scoring - INFO - Estimated change in apolar solvation energy: -0.422 kcal/mol.
+    2026-10-02 12:04:44,580 - mmpbsa_scoring - INFO - Estimated change in folding stability: 1.194 kcal/mol.
+
+**Important:** Be aware that there might be small differences in the results, which are due to the minimization!
 
 References / Licenses
 ---------------------
