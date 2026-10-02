@@ -9,6 +9,8 @@ Install the conda environment from the file ``environment.yml`` and execute the 
 
   conda env create -f environment.yml
 
+**Important:** Users have to obtain a copy of FoldX and place the binary in the folder ``mmpbsa_scoring/bin`` under the name ``foldx``, be aware that FoldX is subject to its own `license agreements <https://foldxsuite.crg.eu/licensing-and-services>`_.
+
 
 The pipeline consists of:
 
@@ -73,5 +75,3 @@ References / Licenses
 See also our preprint about the method: `bioRXiv <https://www.biorxiv.org/content/10.64898/2026.09.22.753561v1>`_
 
 This project is licensed under the MIT license. Keep in mind that third-party software components required to run the tool are subject to their own license agreements.
-
-**Important:** Users have to obtain a copy of FoldX and place the binary in the folder ``mmpbsa_scoring/bin`` under the name ``foldx``, be aware that FoldX is subject to its own `license agreements <https://foldxsuite.crg.eu/licensing-and-services>`_.
