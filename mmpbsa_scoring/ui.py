@@ -197,8 +197,8 @@ def main():
                    chain_group_b=chain_group_b,
                    mutation=mutation)
 
-    shutil.copy('structure_mutated_minimized.pdb', os.path.join(cwd, 'structure_mutated.pdb'))
-    shutil.copy('structure_wildtype_minimized.pdb', os.path.join(cwd, 'structure_wildtype.pdb'))
+        shutil.copy('structure_mutated_minimized.pdb', os.path.join(cwd, 'structure_mutated.pdb'))
+        shutil.copy('structure_wildtype_minimized.pdb', os.path.join(cwd, 'structure_wildtype.pdb'))
 
     os.chdir(cwd)
     shutil.rmtree(tmp_dir)
