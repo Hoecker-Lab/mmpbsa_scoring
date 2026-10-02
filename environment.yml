@@ -9,4 +9,5 @@ dependencies:
   - apbs
   - pdbfixer
   - openmm
+  - cuda-version=x.x
   - reduce

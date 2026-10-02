@@ -3,6 +3,8 @@ MMPBSA_Scoring - A python pipeline for estimating single residue mutation effect
 
 Install the conda environment from the file ``environment.yml`` and execute the python script ``mmpbsa_scoring/ui.py`` to run the pipeline.
 
+**Important**: Edit the line ``cuda-version=x.x`` in the file ``environment.yml`` to make sure the correct version of CUDA is installed for your system!
+
 .. code-block:: bash
 
   conda env create -f environment.yml
