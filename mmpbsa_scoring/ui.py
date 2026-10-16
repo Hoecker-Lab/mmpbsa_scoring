@@ -162,7 +162,7 @@ def main():
                         chain_group_b=chain_group_b)
 
         if os.path.isfile('structure_cleaned_repacked.pdb'):
-            shutil.copy('structure_cleaned_repacked.pdb', os.path.join(cwd, 'structure_prepared.pdb'))
+            shutil.copy('structure_cleaned_repacked.pdb', os.path.splitext(structure)[0] + '_prepared.pdb')
         else:
             logger.error('Structure preparation failed.')
             raise RuntimeError('Structure preparation failed.')
@@ -197,8 +197,12 @@ def main():
                    chain_group_b=chain_group_b,
                    mutation=mutation)
 
-        shutil.copy('structure_mutated_minimized.pdb', os.path.join(cwd, 'structure_mutated.pdb'))
-        shutil.copy('structure_wildtype_minimized.pdb', os.path.join(cwd, 'structure_wildtype.pdb'))
+        if os.path.isfile('structure_mutated_minimized.pdb') and os.path.isfile('structure_wildtype_minimized.pdb'):
+            shutil.copy('structure_mutated_minimized.pdb', os.path.splitext(structure)[0] + '_mutated.pdb')
+            shutil.copy('structure_wildtype_minimized.pdb', os.path.splitext(structure)[0] + '_wildtype.pdb')
+        else:
+            logger.error('Mutational evaluation failed.')
+            raise RuntimeError('Mutational evaluation failed.')
 
     os.chdir(cwd)
     shutil.rmtree(tmp_dir)
