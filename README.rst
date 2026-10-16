@@ -5,7 +5,7 @@ Install the conda environment from the file ``environment.yml`` and execute the 
 
 **Important**: Edit the line ``cuda-version=x.x`` in the file ``environment.yml`` to make sure the correct version of CUDA is installed for your system!
 
-.. code-block:: bash
+.. code-block::
 
   conda env create -f environment.yml
 
@@ -22,7 +22,7 @@ The pipeline consists of:
 
 **Important**: First prepare the starting structure in mmCIF or PDB format by using the flag ``--prepare`` and use the prepared output model (``structure_prepared.pdb``) as input for all mutational modelling.
 
-.. code-block:: bash
+.. code-block::
 
     Pipeline for estimating single residue mutation effects on protein-protein interactions.
 
@@ -43,14 +43,14 @@ Example
 
 See also the provided example in the folder ``example``, you can recreate the output by executing:
 
-.. code-block:: bash
+.. code-block::
 
     python3 mmpbsa_scoring/ui.py --prepare --structure 2FTL.pdb --chain_group_a E --chain_group_b I
 
     2026-10-02 11:00:48,375 - mmpbsa_scoring - INFO - Cleaning structure.
     2026-10-02 11:00:48,397 - mmpbsa_scoring - INFO - Repacking structure.
 
-.. code-block:: bash
+.. code-block::
 
     python3 mmpbsa_scoring/ui.py --structure structure_prepared.pdb --chain_group_a E --chain_group_b I --mutation I:15:ASP
 
