@@ -52,7 +52,7 @@ See also the provided example in the folder ``example``, you can recreate the ou
 
 .. code-block::
 
-    python3 mmpbsa_scoring/ui.py --structure structure_prepared.pdb --chain_group_a E --chain_group_b I --mutation I:15:ASP
+    python3 mmpbsa_scoring/ui.py --structure 2FTL_prepared.pdb --chain_group_a E --chain_group_b I --mutation I:15:ASP
 
     2026-10-02 12:03:08,875 - mmpbsa_scoring - INFO - Mutating structure.
     2026-10-02 12:03:35,064 - mmpbsa_scoring - INFO - Minimizing mutated structure.
